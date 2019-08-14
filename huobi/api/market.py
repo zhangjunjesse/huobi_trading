@@ -41,7 +41,7 @@ def get_market_trade(symbol="btcusdt"):
     return []
 
 def get_market_history_trade(symbol="btcusdt",size=200):
-    r=requests.get('https://api.huobi.pro/market/trade?symbol='+symbol)
+    r=requests.get('https://api.huobi.pro/market/history/trade?symbol='+symbol+'&size='+str(size))
     try:
         result = json.loads(r.text)
         if result['status'] == 'ok' :
@@ -52,9 +52,9 @@ def get_market_history_trade(symbol="btcusdt",size=200):
         traceback.print_exc()
     return []
 
-curl "https://api.huobi.pro/market/history/trade?symbol=ethusdt&size=2"
 
     
 print(get_kline())
 print(get_depth())
 print(get_market_trade())
+print(get_market_history_trade())
