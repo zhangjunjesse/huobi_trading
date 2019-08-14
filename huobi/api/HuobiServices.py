@@ -159,12 +159,8 @@ def send_order(amount, source, symbol, _type, price=0):
     :param price: 
     :return: 
     """
-    try:
-        accounts = get_accounts()
-        acct_id = accounts['data'][0]['id']
-    except BaseException as e:
-        print ('get acct_id error.%s' % e)
-        acct_id = ACCOUNT_ID
+        
+    acct_id = ACCOUNT_ID
 
     params = {"account-id": acct_id,
               "amount": amount,
@@ -369,12 +365,8 @@ def send_margin_order(amount, source, symbol, _type, price=0):
     :param price: 
     :return: 
     """
-    try:
-        accounts = get_accounts()
-        acct_id = accounts['data'][0]['id']
-    except BaseException as e:
-        print ('get acct_id error.%s' % e)
-        acct_id = ACCOUNT_ID
+    
+    acct_id = ACCOUNT_ID
 
     params = {"account-id": acct_id,
               "amount": amount,
@@ -486,4 +478,9 @@ def margin_balance(symbol):
 
 
 if __name__ == '__main__':
-    print (get_symbols())
+#     print (get_symbols())
+#     print(get_accounts()['data'])
+#     ACCOUNT_ID = get_accounts()['data'][1]['id']
+#     print(send_order(0.1, "margin-api", "btcusdt", "buy-limit", price=100))
+    data = get_kline("btcusdt", "5min", size=150)
+    print(data)
