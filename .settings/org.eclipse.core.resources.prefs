@@ -1,6 +1,12 @@
 eclipse.preferences.version=1
+encoding//Websocket-Python3-demo/huobi.py=utf-8
 encoding//demo/HuobiServices.py=utf-8
+encoding//demo/REST-Python3.5-demo/hbdm_api_demo.py=utf-8
 encoding//demo/Utils.py=utf-8
+encoding//demo/heyue/HuobiDMService.py=utf-8
+encoding//demo/heyue/HuobiDMUtil.py=utf-8
+encoding//demo/heyue/hbdm_api_demo.py=utf-8
+encoding//demo/heyue/test.py=utf-8
 encoding//huobi/api/HuobiServices.py=utf-8
 encoding//huobi/api/Utils.py=utf-8
 encoding//huobi/strategy/123.py=utf-8
